@@ -10,7 +10,7 @@ const buttonVariants = cva(
         variants: {
             variant: {
                 default:
-                    "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
+                    "bg-primary text-primary-foreground shadow-xs hover:bg-primary/50",
             },
             size: {
                 default: "h-9 px-4 py-2 has-[>svg]:px-3",

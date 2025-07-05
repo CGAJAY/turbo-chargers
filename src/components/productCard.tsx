@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/types/index";
+import { Button } from "./ui/button";
 
 const ProductCard = ({ product }: { product: Product }) => {
     return (
@@ -19,6 +20,7 @@ const ProductCard = ({ product }: { product: Product }) => {
                 <p className="text-sm text-gray-600 mt-1">
                     {product.description.slice(0, 60)}...
                 </p>
+                <Button className="mt-4 w-full">Read More</Button>
             </div>
         </Link>
     );
