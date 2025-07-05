@@ -5,8 +5,8 @@ const Footer = () => {
     return (
         <div>
             <footer
-                className="bg-[#122358] text-white py-6 flex-col md:flex-row justify-between px-4 sm:px-6 lg:px-8
-            items-center border-t-2">
+                className="bg-[#122358] text-white py-6  px-4 sm:px-6 lg:px-8
+           border-t-2  flex flex-col md:flex-row justify-between items-center">
                 <div>
                     <h4 className="font-bold">About info</h4>
                     <p className="">We are turbocharger specialists</p>
