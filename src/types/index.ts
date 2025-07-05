@@ -10,9 +10,3 @@ export interface Product {
     }[];
     notes: string[];
 }
-
-export interface Props {
-    params: {
-        id: string;
-    };
-}

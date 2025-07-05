@@ -1,11 +1,10 @@
 import { notFound } from "next/navigation";
 import { products } from "@/constants";
-import { Props } from "@/types";
 import { ProductGallery } from "@/components/productGallery";
 import { ProductSpecs } from "@/components/productSpecs";
 import { ProductNotes } from "@/components/productNotes";
 
-const ProductDetail = ({ params }: Props) => {
+const ProductDetail = ({ params }: { params: { id: string } }) => {
     const product = products.find((p) => p.id === params.id);
     if (!product) return notFound();
 
