@@ -4,8 +4,15 @@ import { ProductGallery } from "@/components/productGallery";
 import { ProductSpecs } from "@/components/productSpecs";
 import { ProductNotes } from "@/components/productNotes";
 
-const ProductDetail = ({ params }: { params: { id: string } }) => {
-    const product = products.find((p) => p.id === params.id);
+// Define the props type to handle async params
+interface ProductDetailProps {
+    params: Promise<{ id: string }>; // Use Promise for params
+}
+
+const ProductDetail = async ({ params }: ProductDetailProps) => {
+    // Await the params to resolve the Promise
+    const { id } = await params;
+    const product = products.find((p) => p.id === id);
     if (!product) return notFound();
 
     return (
